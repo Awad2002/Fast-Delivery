@@ -195,6 +195,11 @@ Services page *****************/
     height: 42vh;
 }
 
+.pages2-hero {
+    background: linear-gradient(101.38deg, #F00B08 0.41%, #F36361 100.3%);
+    height: 22vh;
+}
+
 /***************************** 
 About page *****************/
 
@@ -247,4 +252,61 @@ FAQ Page *****************/
     border: none;
     outline: none;
     background: none;
+}
+
+/***************************** 
+login Page *****************/
+
+.login {
+    background-color: #fff;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.20);
+}   
+
+.login form input {
+    padding-left: 11px;
+    padding: 13px;
+    border: 2px solid rgba(0, 0, 0, 0.10);
+}
+.login form input:focus {
+    border: 2px solid rgba(0, 0, 0, 0.80);
+    border-radius: 8px;
+}
+
+.login form label {
+    font-weight: 600;
+}
+
+.login form a {
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none !important;
+}
+.login form a:hover {
+    color: var(--main-color);
+}
+
+.login form input[type="submit"] {
+    background: linear-gradient(101.38deg, #F00B08 0.41%, #F36361 100.3%);
+    color: #fff;
+    font-weight: 500;
+    border: none !important;
+    transition: 300ms;
+    width: 70%;
+}
+.login form input[type="submit"]:hover {
+    background: linear-gradient(101.38deg,  #F36361 0.41%, #F00B08 100.3%);
+}
+
+.login p {
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #333333;
+}
+
+.login p a {
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--main-color);
 }
