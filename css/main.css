@@ -201,3 +201,50 @@ About page *****************/
 .about-page.about-us img {
     height: 470px;
 }
+
+/***************************** 
+Contacu us Page *****************/
+
+.contact-us form label {
+    font-weight: 600;
+}
+
+.contact-us form input {
+    padding-left: 11px;
+    padding: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.14);
+    outline: none;
+}
+
+.contact-us form textarea {
+    padding-left: 11px;
+    padding: 16px;
+    border: 2px solid rgba(0, 0, 0, 0.14);
+    outline: none;
+    min-height: 170px;
+}
+
+.contact-us form .btnnn {
+    padding: 14px 45px;
+    border: none !important;
+}
+
+/***************************** 
+FAQ Page *****************/
+
+.faq .faq-item {
+    border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.faq .faq-item h6 {
+    min-width: 85%;
+    font-weight: 600 !important;
+    display: inline-block;
+}
+
+.faq .faq-item button {
+    float: right;
+    border: none;
+    outline: none;
+    background: none;
+}
