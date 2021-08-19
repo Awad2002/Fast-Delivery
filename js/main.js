@@ -10,11 +10,11 @@ $('.owl-carousel').owlCarousel({
             stagePadding: 10,
         },
         600:{
-            items:3,
+            items:1,
             stagePadding: 30,
         },
         1000:{
-            items:5,
+            items:1,
         }
     }
 })
