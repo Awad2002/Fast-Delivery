@@ -131,6 +131,7 @@ background-color: #fff;
 /* End Gallery */
 footer {
     background-color: #f9f9f9;
+    margin-top: 55px;
 }
 footer h5 {
     font-weight: 600;
@@ -491,8 +492,15 @@ Register Page *****************/
   }
 
   @media screen and (max-width: 480px) {
+    .process-main {
+        flex-wrap: wrap;
+        display: none !important;
+      }
     .hero {
         text-align: center;
+    }
+    .hero h1.register {
+        font-size: 32px;
     }
     .hero .col-md-7 {
         margin-top: 60px;
@@ -508,5 +516,11 @@ Register Page *****************/
         height: 200px;
         border-radius: 10px;
         background-color: #fff;
+    }
+    .about-page.about-us .col-12 {
+        margin-top: 44px;
+    }
+    .about-us .col-md-7 img.w-100 {
+        margin-top: 50px;
     }
   }
