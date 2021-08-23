@@ -18,3 +18,23 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+
+$(document).ready(function(){
+    $('.faq-item .bb-down').on('click', function() {        
+      $(this).next('p').show();
+      $(this).hide();
+      $(this).parents('div.faq-item').find('.bb-up').show();
+    });
+  });
+
+
+  $(document).ready(function(){
+    $('.faq-item .bb-up').on('click', function() {        
+      $('.faq-item').find('.mt-3').hide();
+      $(this).hide();
+      $('.faq-item').find('.bb-down').show();
+    });
+  });
+
+
+  
