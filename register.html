@@ -6,23 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Register</title>
+
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="img/logo.png"/>
+
+    <style>
+      .stepwizard-step p {
+    margin-top: 10px;
+}
+.stepwizard-row {
+    display: table-row;
+}
+.stepwizard {
+    display: table;
+    width: 50%;
+    position: relative;
+}
+.stepwizard-step button[disabled] {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+}
+.stepwizard-row:before {
+    top: 14px;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    z-order: 0;
+}
+.stepwizard-step {
+    display: table-cell;
+    text-align: center;
+    position: relative;
+}
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 12px;
+    line-height: 1.428571429;
+    border-radius: 15px;
+}
+    </style>
+    
 </head>
 <body>
 
     <!-- Start Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white p-1">
         <div class="container">
-          <a class="navbar-brand" href="#"><img src="img/logo.png" width="86"></a>
+          <a class="navbar-brand" href="index.html"><img src="img/logo.png" width="86"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -67,119 +112,400 @@
             <div class="col-md-2"></div>
             <div class="col-md-8 col-12">
                 <div class="login text-center p-4 rounded">
+
                     <h4 class="fw-bold"> Register </h4>
-                    <p class="mb-3"> Enter required details to make account </p>
+                    <p class="mb-3"> Enter details to make account </p>
 
-                    <div class="process-wrap active-step1 ms-auto me-auto mt-4 mb-4">
-                        <div class="process-main">
-                          <div class="col-4">
-                            <div class="process-step-cont">
-                              <div class="process-step step-1"></div>
-                              <span class="process-label">Company Details</span>
-                            </div>
-                          </div>
-                          <div class="col-4 ">
-                            <div class="process-step-cont">
-                              <div class="process-step step-2"></div>
-                              <span class="process-label">Google Maps</span>
-                            </div>
+                    <div class="steps mt-4 mb-4">
+                      <div class="row d-flex">
+                        <div class="col-12 position-relative">
+
+                          <div class="d-inline-block ms-5 me-5 text-center">
+                            <button class="btn">
+                              <div class="ms-auto me-auto btn-circle active"> 1 </div>
+                              <h6 class="fs-8 mt-2 color-my" style="font-size: 14px;"> Company Datails </h6>
+                            </button>
                           </div>
 
-                          <div class="col-4">
-                            <div class="process-step-cont">
-                              <div class="process-step step-3"></div>
-                              <span class="process-label">Terms & Conditions</span>
-                            </div>
+                          <div class="d-inline-block ms-5 me-5 text-center">
+                            <button class="btn">
+                              <div class="ms-auto me-auto btn-circle" id="step2"> 2 </div>
+                              <h6 class="fs-8 mt-2" style="font-size: 14px;"> Select Location </h6>
+                            </button>
                           </div>
+
+                          <div class="d-inline-block ms-5 me-5 text-center">
+                            <button class="btn">
+                              <div class="ms-auto me-auto btn-circle" id="step3"> 3 </div>
+                              <h6 class="fs-8 mt-2" style="font-size: 14px;"> Terms & Conditions </h6>
+                            </button>
+                          </div>
+
                         </div>
                       </div>
+                    </div>
 
-                    <form>
-                        <div class="row">
-                            <form action="register-2.html">
-                                <div class="col-md-6 col-12 text-start mt-3">
-                                    <label for="companyname" class="mb-2">Company Name</label>
-                                    <input type="text" id="companyname" name="companyname" class="w-100 rounded mb-3" placeholder="Enter Company Name">
-                                </div>
-                                <div class="col-md-6 col-12 text-start mt-3">
-                                    <label for="email" class="mb-2">Email</label>
-                                    <input type="Email" id="email" name="email" class="w-100 rounded mb-3" placeholder="Enter your email">
-                                </div>
-                                <div class="col-md-6 col-12 text-start">
-                                    <label for="password" class="mb-2">Password</label>
-                                    <input type="password" id="password" name="password" class="w-100 rounded mb-3" placeholder="Password" required>
-                                </div>
-                                <div class="col-md-6 col-12 text-start">
-                                    <label for="re-password" class="mb-2">Re-type password</label>
-                                    <input type="password" id="re-password" name="re-password" class="w-100 rounded mb-3" placeholder="Password" required>
-                                </div>
-                                <div class="col-md-6 col-12 text-start">
-                                    <label for="phonenumber" class="mb-2">Phone number</label>
-                                    <input type="number" id="phonenumber" name="phonenumber" class="w-100 rounded mb-3" placeholder="Enter Your phone number">
-                                </div>
-                                <div class="col-md-6 col-12 text-start">
-                                    <label for="area" class="mb-2">Area</label>
-                                    <input type="text" id="area" name="area" class="w-100 rounded mb-3" placeholder="Enter The Area">
-                                </div>
-                                <div class="col-md-6 col-12 text-start">
-                                    <label for="block" class="mb-2">Block</label>
-                                    <input type="text" id="block" name="block" class="w-100 rounded mb-3" placeholder="Enter The Block">
-                                </div>
-                                <div class="col-md-6 col-12 text-start">
-                                    <label for="street" class="mb-2">Street Name & No.</label>
-                                    <input type="text" id="street" name="street" class="w-100 rounded mb-3" placeholder="Enter The Street Name & No.">
-                                </div>
-                                <div class="col-md-6 col-12 text-start">
-                                    <label for="Building" class="mb-2">Building No.</label>
-                                    <input type="text" id="Building" name="Building" class="w-100 rounded mb-3" placeholder="Enter The Building No.">
-                                </div>
-                                <div class="col-md-6 col-12 text-start">
-                                    <label for="apartment" class="mb-2">Apartment & Office No.</label>
-                                    <input type="text" id="apartment" name="apartment" class="w-100 rounded mb-3" placeholder="Enter the Apartment & Office No..">
-                                </div>
-                                <div class="col-md-6 col-12 text-start">
-                                    <label for="floor" class="mb-2">Floor</label>
-                                    <input type="text" id="floor" name="floor" class="w-100 rounded mb-3" placeholder="Enter The Building No.">
-                                </div>
-                                <div class="col-md-6 col-12 text-start">
-                                    <label for="credit-fee" class="mb-2">Credit Fee</label>
-                                    <input type="text" id="credit-fee" name="credit-fee" class="w-100 rounded mb-3" placeholder="Enter The Credit Fee">
-                                </div>
+                    <div class="tabs">
 
-                                <input type="submit" class="mb-2 w-50 ms-auto me-auto d-block mt-3 rounded" value="Continue" onclick="window.location.href='register-2.html'">
-                            </form>
-                            <p class="mt-2"> Do you have Account? <a href="register.html"> Login </a></p>
+                      <div class="tab1">
+
+                          <div class="row">
+                                  <div class="col-md-6 col-12 text-start mt-3">
+                                      <label for="companyname" class="mb-2">Company Name</label>
+                                      <input type="text" id="companyname" name="companyname" class="w-100 rounded mb-3"
+                                          placeholder="Enter Company Name">
+                                  </div>
+                                  <div class="col-md-6 col-12 text-start mt-3">
+                                      <label for="email" class="mb-2">Email</label>
+                                      <input type="Email" id="email" name="email" class="w-100 rounded mb-3"
+                                          placeholder="Enter your email">
+                                  </div>
+                                  <div class="col-md-6 col-12 text-start">
+                                      <label for="password" class="mb-2">Password</label>
+                                      <input type="password" id="password" name="password" class="w-100 rounded mb-3"
+                                          placeholder="Password">
+                                  </div>
+                                  <div class="col-md-6 col-12 text-start">
+                                      <label for="password_confirmation" class="mb-2"> Re-type password </label>
+                                      <input type="password" id="password_confirmation" name="re-password"
+                                          class="w-100 rounded mb-3" placeholder="Password">
+                                  </div>
+                                  <div class="col-md-6 col-12 text-start">
+                                      <label for="phonenumber" class="mb-2"> Phone number </label>
+                                      <input type="number" id="phonenumber" name="phonenumber" class="w-100 rounded mb-3"
+                                          placeholder="Enter Your phone number">
+                                  </div>
+  
+                                  <!-- Start Area Selector -->
+                                  <div class="col-md-6 col-12 text-start">
+                                      <label for="Governorate" class="mb-2"> Governorate</label>
+                                      <select type="text" id="Governorate" name="Governorate" class="w-100 rounded mb-3"
+                                          placeholder="Enter The Area">
+                                          <option value="none"> Select Governorate </option>
+                                          <option value="ahmadi"> Ahmadi </option>
+                                          <option value="al-asimah"> Al-Asimah </option>
+                                          <option value="farwaniya"> Farwaniya </option>
+                                          <option value="hawalli"> Hawalli </option>
+                                          <option value="jahra"> Jahra </option>
+                                          <option value="mubarak"> Mubarak Al-Kabeer </option>
+                                      </select>
+                                  </div>
+                                  <!-- Start Sub-Areas -->
+  
+                                  <div class="col-md-6 col-12 text-start subarea" style="display: none;" id="ahmadi">
+                                      <label for="area" class="mb-2"> Area </label>
+                                      <select type="text" id="area" name="area" class="w-100 rounded mb-3"
+                                          placeholder="Enter The Area">
+                                          <option> Select Sub Area </option>
+                                          <option value="abu-hulaifa"> Abu Hulaifa </option>
+                                          <option value="abdullah-port"> Abdullah Port </option>
+                                          <option value="ahmadi"> Ahmadi </option>
+                                          <option value="ali-as-salim1"> Ali As-Salim </option>
+                                          <option value="aqila"> Aqila </option>
+                                          <option value="bar-al-ahmadi"> Bar Al Ahmadi </option>
+                                          <option value="bneidar"> Bneidar </option>
+                                          <option value="dhaher"> Dhaher </option>
+                                          <option value="fahaheel"> Fahaheel </option>
+                                          <option value="fahad-al-ahmad"> Fahad Al-Ahmad </option>
+                                          <option value="hadiya"> Hadiya </option>
+                                          <option value="jaber-al-ali"> Jaber Al-Ali </option>
+                                          <option value="jawaher-al-wafra"> Jawaher Al Wafra </option>
+                                          <option value="jileia"> Jilei'a </option>
+                                          <option value="khairan"> Khairan </option>
+                                          <option value="mahbula"> Mahbula </option>
+                                          <option value="mangaf"> Mangaf </option>
+                                          <option value="miqwa"> Miqwa' </option>
+                                          <option value="new-khairan-city"> New Khairan City </option>
+                                          <option value="new-wafra"> New Wafra </option>
+                                          <option value="nuwaiseeb"> Nuwaiseeb </option>
+                                          <option value="riqqa"> Riqqa </option>
+                                          <option value="sabah-al-ahmad-city"> Sabah Al-Ahmad City </option>
+                                          <option value="sabah-al-ahmad-nautical-city"> Sabah Al-Ahmad Nautical City </option>
+                                          <option value="sabahiya"> Sabahiya </option>
+                                          <option value="shuaiba"> Shu'aiba (North & South) </option>
+                                          <option value="south-sabahiya"> South Sabahiya </option>
+                                          <option value="wafra"> Wafra </option>
+                                          <option value="zoor"> Zoor </option>
+                                          <option value="zuhar"> Zuhar </option>
+                                      </select>
+                                  </div>
+  
+                                  <div class="col-md-6 col-12 text-start subarea" style="display: none;" id="al-asimah">
+                                      <label for="area" class="mb-2">Area</label>
+                                      <select type="text" id="area" name="area" class="w-100 rounded mb-3"
+                                          placeholder="Enter The Area">
+                                          <option> Select Area </option>
+                                          <option value="Kuwait-City"> Kuwait City </option>
+                                          <option value="Abdullah-as-Salim"> Abdullah as-Salim </option>
+                                          <option value="Adiliya"> Adiliya </option>
+                                          <option value="Bneid-il-Gār"> Bneid il-Gār </option>
+                                          <option value="Daiya"> Da'iya </option>
+                                          <option value="Dasma"> Dasma </option>
+                                          <option value="Dasman"> Dasmān </option>
+                                          <option value="Doha"> Doha </option>
+                                          <option value="Doha-Port"> Doha Port </option>
+                                          <option value="Faiha"> Faiha </option>
+                                          <option value="Failaka"> Failaka </option>
+                                          <option value="Granada"> Granada </option>
+                                          <option value="Jaber-Al-Ahmad-City"> Jaber Al-Ahmad City </option>
+                                          <option value="Jibla"> Jibla </option>
+                                          <option value="Kaifan"> Kaifan </option>
+                                          <option value="Khaldiya"> Khaldiya </option>
+                                          <option value="Mansūriya"> Mansūriya </option>
+                                          <option value="Mirgab"> Mirgab </option>
+                                          <option value="Nahdha"> Nahdha </option>
+                                          <option value="Nuzha"> Nuzha </option>
+                                          <option value="Qadsiya"> Qadsiya </option>
+                                          <option value="Qurtuba"> Qurtuba </option>
+                                          <option value="Rawda"> Rawda </option>
+                                          <option value="Salhiya"> Salhiya </option>
+                                          <option value="Sawābir"> Sawābir</option>
+                                          <option value="Shamiya"> Shamiya</option>
+                                          <option value="Sharq"> Sharq </option>
+                                          <option value="Shuwaikh-Industrial-Area"> Shuwaikh Industrial Area </option>
+                                          <option value="Shuwaikh-Port"> Shuwaikh Port </option>
+                                          <option value="Sulaibikhat"> Sulaibikhat </option>
+                                          <option value="Surra"> Surra </option>
+                                          <option value="Umm-an-Namil-Island"> Umm an Namil Island </option>
+                                          <option value="Yarmuk"> Yarmūk </option>
+                                      </select>
+                                  </div>
+  
+                                  <div class="col-md-6 col-12 text-start subarea" style="display: none;" id="farwaniya">
+                                      <label for="area" class="mb-2">Sub Area</label>
+                                      <select type="text" id="area" name="area" class="w-100 rounded mb-3"
+                                          placeholder="Enter The Area">
+                                          <option> Select Sub Area </option>
+                                          <option value="Abdullah-Al-Mubarak"> Abdullah Al-Mubarak </option>
+                                          <option value="Airport-District"> Airport District </option>
+                                          <option value="Andalous"> Andalous </option>
+                                          <option value="Ardiya"> Ardiya </option>
+                                          <option value="Ardiya-Herafiya"> Ardiya Herafiya </option>
+                                          <option value="Ardiya-Industrial-Area"> Ardiya Industrial Area </option>
+                                          <option value="Ashbelya"> Ashbelya </option>
+                                          <option value="Dhajeej"> Dhajeej </option>
+                                          <option value="Farwaniya"> Farwaniya </option>
+                                          <option value="Fordous"> Fordous </option>
+                                          <option value="Jleeb Al-Shuyoukh"> Jleeb Al-Shuyoukh </option>
+                                          <option value="Khaitan"> Khaitan </option>
+                                          <option value="Omariya"> Omariya </option>
+                                          <option value="Rabiya"> Rabiya </option>
+                                          <option value="Rai"> Rai </option>
+                                          <option value="Riggae"> Riggae </option>
+                                          <option value="Rihab"> Rihab </option>
+                                          <option value="Sabah-Al-Nasser"> Sabah Al-Nasser </option>
+                                          <option value="Sabaq-Al-Hajan"> Sabaq Al Hajan </option>
+                                      </select>
+                                  </div>
+  
+                                  <div class="col-md-6 col-12 text-start subarea" style="display: none;" id="hawalli">
+                                      <label for="area" class="mb-2"> Area</label>
+                                      <select type="text" name="area" class="w-100 rounded mb-3" placeholder="Enter The Area"
+                                          id="area">
+                                          <option> Select Area </option>
+                                          <option value="Anjafa">Anjafa</option>
+                                          <option value="Bayān">Bayān</option>
+                                          <option value="Bidi"> Bi'di' </option>
+                                          <option value="Hawally"> Hawally </option>
+                                          <option value="Hittin"> Hittin </option>
+                                          <option value="Jabriya"> Jabriya </option>
+                                          <option value="Maidan-Hawalli"> Maidan Hawalli </option>
+                                          <option value="Mishrif"> Mishrif </option>
+                                          <option value="Mubarak-Al-Jabir"> Mubarak Al-Jabir </option>
+                                          <option value="Nigra"> Nigra </option>
+                                          <option value="Rumaithiya"> Rumaithiya </option>
+                                          <option value="Salam"> Salam </option>
+                                          <option value="Salmiya"> Salmiya </option>
+                                          <option value="Salwa"> Salwa </option>
+                                          <option value="Shaab"> Sha'ab </option>
+                                          <option value="Shuhada"> Shuhada </option>
+                                          <option value="Siddiq"> Siddiq </option>
+                                          <option value="South-Surra"> South Surra </option>
+                                          <option value="Zahra"> Zahra </option>
+                                      </select>
+                                  </div>
+
+                                  <div class="col-md-6 col-12 text-start subarea" style="display: none;" id="jahra">
+                                      <label for="area" class="mb-2"> Area</label>
+                                      <select type="text" name="area" class="w-100 rounded mb-3">
+                                          <option> Select Area </option>
+                                          <option value="Abdali"> Abdali </option>
+                                          <option value="Al-Nahda"> Al Nahda </option>
+                                          <option value="Amghara"> Amghara </option>
+                                          <option value="Bar-Jahra"> Bar Jahra </option>
+                                          <option value="Jahra"> Jahra </option>
+                                          <option value="Jahra-Industrial-Area"> Jahra Industrial Area </option>
+                                          <option value="Kabad">Kabad </option>
+                                          <option value="Naeem"> Naeem </option>
+                                          <option value="Nasseem"> Nasseem </option>
+                                          <option value="Oyoun"> Oyoun </option>
+                                          <option value="Qasr"> Qasr </option>
+                                          <option value="Saad-Al-Abdullah"> Saad Al Abdullah </option>
+                                          <option value="Salmi"> Salmi </option>
+                                          <option value="Sikrab"> Sikrab </option>
+                                          <option value="South-Doha-Qairawān"> South Doha - Qairawān </option>
+                                          <option value="Sulaibiya"> Sulaibiya </option>
+                                          <option value="Sulaibiya-Agricultural-Area"> Sulaibiya Agricultural Area </option>
+                                          <option value="Taima"> Taima </option>
+                                          <option value="Taima"> Waha </option>
+                                      </select>
+                                  </div>
+  
+                                  <div class="col-md-6 col-12 text-start subarea" style="display: none;" id="mubarak">
+                                      <label for="area" class="mb-2"> Area </label>
+                                      <select type="text" id="area" name="area" class="w-100 rounded mb-3">
+                                          <option> Select Area </option>
+                                          <option value="Abu-Al-Hasaniya	"> Abu Al Hasaniya </option>
+                                          <option value="Abu-Fteira"> Abu 'Fteira </option>
+                                          <option value="Adan"> Adān </option>
+                                          <option value="Al-Qurain"> Al Qurain </option>
+                                          <option value="Fintas"> Fintās </option>
+                                          <option value="Misila"> Misila </option>
+                                          <option value="Mubarak-Al-Kabeer">Mubarak Al-Kabeer </option>
+                                          <option value="Sabah-Al-Salem"> Sabah Al-Salem </option>
+                                          <option value="Sabhan"> Sabhān </option>
+                                          <option value="South-Wista"> South Wista </option>
+                                          <option value="Wista"> Wista </option>
+                                      </select>
+                                  </div>
+  
+                                  <!-- End Sub-Areas -->
+                                  <!-- End Area Selector -->
+  
+                                  <div class="col-md-6 col-12 text-start">
+                                      <label for="block" class="mb-2">Block</label>
+                                      <input type="text" id="block" name="block" class="w-100 rounded mb-3"
+                                          placeholder="Enter The Block">
+                                  </div>
+                                  <div class="col-md-6 col-12 text-start">
+                                      <label for="street" class="mb-2">Street Name & No.</label>
+                                      <input type="text" id="street" name="street" class="w-100 rounded mb-3"
+                                          placeholder="Enter The Street Name & No.">
+                                  </div>
+                                  <div class="col-md-6 col-12 text-start">
+                                      <label for="Building" class="mb-2">Building No.</label>
+                                      <input type="text" id="Building" name="Building" class="w-100 rounded mb-3"
+                                          placeholder="Enter The Building No.">
+                                  </div>
+                                  <div class="col-md-6 col-12 text-start">
+                                      <label for="apartment" class="mb-2">Apartment & Office No.</label>
+                                      <input type="text" id="apartment" name="apartment" class="w-100 rounded mb-3"
+                                          placeholder="Enter the Apartment & Office No..">
+                                  </div>
+  
+                                  <div class="col-md-6 col-12 text-start">
+                                      <label for="floor" class="mb-2">Floor</label>
+                                      <input type="text" id="floor" name="floor" class="w-100 rounded mb-3"
+                                          placeholder="Enter The Building No.">
+                                  </div>
+  
+                                  <div class="col-md-6 col-12 text-start" style="display: none">
+                                      <input type="text" id="lang" class="w-100 rounded mb-3" value="en">
+                                  </div>
+
+                                  <div class="col-12">
+                                      <button class="btn bg-my rounded text-white fw-medium mb-2 w-50 pt-3 pb-3 ms-auto me-auto d-block mt-3 rounded next-btn1" class="btn" id="button"> Continue </button>
+                                  </div>
+  
+                              <p class="mt-2"> Do you have Account? <a href="login.html"> Login </a></p>
+                          </div>
+
+                      </div>
+
+                      <div class="tab2" style="display: none;">
+
+
+
+                        <div class="col-12">
+                          <button class="btn bg-my rounded text-white fw-medium mb-2 w-50 pt-3 pb-3 ms-auto me-auto d-block mt-3 rounded next-btn2" class="btn" id="button"> Continue </button>
                         </div>
-                    </form>
+
+                      </div>
+
+                      <div class="tab3" style="display: none;">
+
+                        <div class="col-12 rounded p-2 mb-2 overflow-scroll" style="background-color: #f2f2f2; height: 460px;">
+                          <p class="text-start">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices posuere diam nec tincidunt. Nullam at quam vel nisl pretium blandit. Aenean ultrices tellus erat, in pharetra justo congue quis. Vivamus vitae mauris ac dolor elementum interdum. Nam vel nibh dapibus, mollis ex fermentum, tincidunt purus. Ut finibus, urna quis consectetur auctor, mi lacus congue risus, et efficitur dolor turpis in enim. Aliquam erat volutpat. Fusce scelerisque felis non diam pretium, non finibus turpis euismod.
+<br>
+<br>
+Integer ut ligula nunc. Nulla id feugiat eros. Nulla id mauris mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras eu massa rhoncus, dapibus turpis vel, tempus arcu. Integer varius pretium leo sed aliquet. Proin orci mi, tempus vitae sagittis sed, mollis non turpis. Morbi auctor vitae eros molestie accumsan. Quisque posuere sodales cursus. Fusce sodales arcu vitae cursus consectetur. Nulla facilisi. Fusce pretium egestas massa nec euismod. Curabitur quis mauris id justo mattis auctor sed eget tellus.
+<br>
+<br>
+Nulla sed nisl sed nibh mollis pulvinar et at quam. Curabitur tristique orci at metus tempor, sit amet sodales lectus placerat. Curabitur at augue nisi. Duis eget enim sem. Etiam semper metus nec elementum convallis. Suspendisse potenti. In tristique vel est finibus ultrices. Ut suscipit quam at ante egestas lobortis. Integer lacinia congue ullamcorper. In enim enim, suscipit in sollicitudin rutrum, mattis vitae ex. Curabitur rutrum, sapien et rutrum placerat, metus mauris congue dolor, vulputate mattis elit purus a enim.
+<br>
+<br>
+Morbi posuere scelerisque tellus, et auctor risus bibendum eget. Nullam pellentesque efficitur elit, eget mattis ipsum facilisis nec. Morbi commodo vel est eget tempus. Sed ut lacus ut lacus tempus pretium. Curabitur tempor orci in nisl luctus fringilla. Etiam scelerisque tellus nisi, in suscipit erat aliquet at. Vivamus et elementum nisi. Fusce eu iaculis ex. Quisque risus sapien, imperdiet in tempus id, maximus non justo. Nullam sodales sapien quis imperdiet blandit. Duis pulvinar purus a ante efficitur, condimentum lacinia velit efficitur. Fusce sed ex sit amet orci iaculis condimentum id quis augue. Morbi non nunc hendrerit tellus fermentum mollis. Ut viverra lorem et vehicula mollis. Maecenas eu interdum nibh.
+<br>
+<br>
+Curabitur ultrices turpis ac justo hendrerit cursus. Vestibulum vitae magna quis dolor sagittis porttitor. Nullam tincidunt, diam non condimentum rhoncus, magna felis condimentum ex, at tristique ante diam id leo. In eleifend purus nec ullamcorper convallis. Integer at suscipit justo. Suspendisse potenti. Nullam condimentum volutpat diam ac sodales. Praesent eget nisl nec tellus aliquet tincidunt nec vitae ipsum. Cras malesuada urna sed massa commodo varius. Phasellus luctus sapien sit amet accumsan ullamcorper. Vivamus rutrum purus vitae euismod tincidunt. Nunc ultrices, tortor vitae tristique tincidunt, enim quam dignissim sapien, id pellentesque urna ligula a diam.
+<br>
+<br>
+Aliquam ultricies suscipit odio a varius. Donec faucibus nisl vitae enim porttitor aliquet. Aenean rutrum id metus at porttitor. Duis consequat est ac mauris varius viverra. Aenean velit lectus, dapibus a diam eget, pellentesque placerat eros. Phasellus vestibulum lacus in odio fermentum lacinia. Morbi id molestie orci. Sed vehicula tempor sapien, gravida varius magna sagittis at. Ut dignissim non orci eget aliquam. Nam eleifend urna venenatis malesuada laoreet. Nulla quis lacus eget elit molestie eleifend. Etiam placerat erat ullamcorper justo vestibulum dictum tempor a nisi. Proin dapibus dolor ac tellus luctus, sed tempus justo gravida. Donec id magna elementum, bibendum lectus id, sagittis nisi.
+<br>
+<br>
+Vivamus sed dui scelerisque, varius erat sed, pharetra lorem. Sed viverra, ligula a pellentesque lacinia, odio lectus convallis neque, tempus placerat leo lectus sit amet nulla. In pretium finibus mauris quis aliquam. Integer imperdiet orci sem, eu accumsan orci molestie non. Proin ac nisl elementum, feugiat sapien eu, facilisis sem. Mauris vestibulum id libero vel vestibulum. Aliquam erat volutpat. Pellentesque nec purus porttitor, finibus orci eget, blandit metus.
+<br>
+<br>
+Cras in magna vitae erat aliquam sollicitudin et eget arcu. Aliquam tempus justo mi, quis imperdiet lorem lacinia et. Nam scelerisque lorem lorem, sed faucibus ligula tempor a. Phasellus commodo ligula eget eleifend congue. Praesent vel mauris vitae quam auctor eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis ac turpis vitae mauris vehicula congue eu in orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin eu varius massa. Proin suscipit in odio imperdiet fringilla. Nunc in porttitor mi, et eleifend lectus. Vestibulum vel posuere lacus.
+<br>
+<br>
+Mauris euismod finibus augue a egestas. Mauris vitae gravida lectus. Fusce pulvinar sem eu lacus commodo, nec fermentum est sagittis. Phasellus fringilla magna ac odio luctus sagittis. Proin rhoncus nibh erat, sit amet lobortis sapien luctus et. Suspendisse eleifend vehicula dui at consectetur. Donec gravida eu odio in ullamcorper. Praesent suscipit ut sem nec euismod. Phasellus tincidunt leo ut lacinia maximus. Curabitur luctus mi a lacus dapibus, vel porttitor elit iaculis. Duis id ligula ut metus sagittis luctus a ut nisi. Vivamus viverra diam ac ante tempor finibus.
+<br>
+<br>
+Donec in dui est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean varius dolor enim, et aliquet erat tristique vitae. Morbi consectetur nunc non metus tempus gravida. Donec sed quam sit amet est volutpat imperdiet vel eu dui. Nullam tempus mauris in ante varius, nec volutpat metus ultricies. Vestibulum placerat felis quis nibh viverra, non placerat dolor venenatis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec pretium ut turpis ac varius. Donec mattis fermentum odio vel efficitur. Nunc in auctor eros, a tristique arcu. Cras in convallis elit.
+                          </p>
+                        </div>
+
+                        <div class="me-auto d-flex align-center mt-4">
+                          <input type="checkbox" name="checkbox" value="check" id="agree" class="me-2 m-0 p-0 form-check form-check-inline" /> <p class="m-0 p-0">I have read and agree to the Terms and Conditions and Privacy Policy</p>
+                        </div>
+
+                        <div class="col-12 ">
+                          <button class="btn bg-my rounded text-white fw-medium mb-2 w-50 pt-3 pb-3 ms-auto me-auto d-block mt-3 rounded" class="btn" id="button"> Register </button>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+
                 </div>
             </div>
             <div class="col-2"></div>
         </div>
     </div>
 
-    <footer class="p-5">
+    <footer class="p-5 mt-80">
       <div class="container">
           <div class="row">
 
               <div class="col-md-3 col-12">
                   <img src="img/logo.png" class="mb-3">
-                  <p> Manage all your delivery operations from one platform to enhance efficiency, boost sales and deliver exceptional </p>
+                  <p> Manage all your delivery operations from one platform to enhance efficiency. </p>
+                  <div class="social-icons">
+                    <a href="https://www.instagram.com/fstdelivery/" class="d-inllund-block me-3 h4" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                  </div>
               </div>
 
               <div class="col-1"></div>
+
               <div class="col-12 col-md-2"> 
-                  <h5> Learn More </h5>
-                  <a href="#" class="d-block mb-2 mt-3"> Home </a>
-                  <a href="#" class="d-block mb-2"> About Us </a>
-                  <a href="#" class="d-block mb-2"> Our Services </a>
-                  <a href="#" class="d-block mb-2"> Contact Us </a>
-                  <a href="#" class="d-block mb-2"> FAQ </a>
-              </div>
+                <h5> Learn More </h5>
+                <a href="index.html" class="d-block mb-2 mt-3"> Home </a>
+                <a href="about.html" class="d-block mb-2"> About Us </a>
+                <a href="our-services.html" class="d-block mb-2"> Our Services </a>
+                <a href="contact.html" class="d-block mb-2"> Contact Us </a>
+                <a href="faq.html" class="d-block mb-2"> FAQ </a>
+            </div>
 
               <div class="col-md-3 col-12"> 
                   <h5> Contact Us </h5>
-                  <a href="#" class="d-block mb-2 mt-3 fw-bold"> <i class="me-2 fas fa-mobile"></i> 009621234567 </a>
-                  <a href="#" class="d-block mb-2 mt-3 fw-bold"> <i class="me-2 fas fa-envelope"></i> info@name.com </a>
+                  <a href="#" class="d-block mb-2 mt-3 fw-bold"> <i class="me-2 fas fa-mobile"></i> +965 - 51201717 </a>
+                  <a href="#" class="d-block mb-2 mt-3 fw-bold"> <i class="me-2 fas fa-envelope"></i> info@fstdelivery.com </a>
+                  <a href="#" class="d-block mb-2 mt-3 fw-bold"> <i class="me-2 fas fa-map-marker"></i> 
+                    Qibla , Ahmed Al-Jaber Street , Zamrad Tower , Floor 15
+                  </a>
               </div>
 
               <div class="col-md-3 col-12">
